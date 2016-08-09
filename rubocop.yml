@@ -53,6 +53,9 @@ Style/CommentAnnotation:
 Style/Documentation:
   Enabled: false
 
+Style/EmptyCaseCondition: # Sometimes a case statement reads better than if … elsif … end
+  Enabled: false
+
 Style/EmptyLines: # Consecutive empty lines are sometimes useful for additional structure
   Enabled: false
 
