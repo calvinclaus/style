@@ -1,0 +1,118 @@
+# Disable complexity / length cops
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/LineLength: # FIXME: Should we disable line legnth checking completely?
+  Max: 120
+
+
+# Disable performance cops that may lead to less readable code in some cases
+
+Performance/Casecmp:
+  Description: >-
+             Use `casecmp` rather than `downcase ==`, `upcase ==`, `== downcase`, or `== upcase`..
+  Reference: 'https://github.com/JuanitoFatas/fast-ruby#stringcasecmp-vs-stringdowncase---code'
+  Enabled: false
+
+Performance/RedundantMerge:
+  Description: 'Use Hash#[]=, rather than Hash#merge! with a single key-value pair.'
+  Reference: 'https://github.com/JuanitoFatas/fast-ruby#hashmerge-vs-hash-code'
+  Enabled: false
+
+
+# Disable various style cops
+
+Style/AsciiComments: # Typographic quotes etc. are perfectly okay in comments
+  Enabled: false
+
+Style/BlockDelimiters: # Both do…end and {…} are okay for all kinds of blocks
+  Enabled: false
+
+Style/ClassAndModuleChildren: # Both nested and compact namespacing is okay
+  Enabled: false
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyLines: # Consecutive empty lines are sometimes useful for additional structure
+  Enabled: false
+
+Style/FormatString: # All `sprintf`, `format`, and `%` are okay for formatting strings
+  Enabled: false
+
+Style/GuardClause: # Sometimes using a guard clause makes the code harder to follow
+  Enabled: false
+
+Style/IfUnlessModifier: # Sometimes using a modifier makes the code harder to read
+  Enabled: false
+
+Style/Lambda: # Both `->` and `lambda` are okay for all kinds of procs
+  Enabled: false
+
+Style/ParallelAssignment: # Parallel assignment is ok for simple cases
+  Enabled: false
+
+Style/PerlBackrefs: # Perl-style regex backrefs (`$1`, …) are short and sweet
+  Enabled: false
+
+Style/SingleLineBlockParams: # Block params should be as meaningful as possible
+  Enabled: false
+
+Style/StringLiterals: # Both '…' and "…" are okay for all kinds of strings
+  Enabled: false
+
+
+# Enforce our preferred styling choices
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/AndOr: # `and` and `or` may be used for control flow (but not in conditionals)
+  EnforcedStyle: conditionals
+
+Style/DotPosition: # Trailing dot works better with intermittent blank lines and copy-pasting into irb
+  EnforcedStyle: trailing
+
+Style/EmptyLineBetweenDefs: # Single line method definitions don’t need blank lines in-between them.
+  AllowAdjacentOneLineDefs: true
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/SpaceBeforeBlockBraces:
+  EnforcedStyle: no_space
+
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Style/SpecialGlobalVars: # `$!` is okay, and we don’t use the other Perl-ish globals anyway
+  Enabled: false
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+
+
+# Various
+
+Style/HashSyntax: # Allow hash rockets for task dependencies in Rakefiles
+  Exclude:
+    - '**/*.rake'
