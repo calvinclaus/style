@@ -122,9 +122,11 @@ Style/TrailingCommaInLiteral:
 
 # Various
 
-Style/HashSyntax: # Allow hash rockets for task dependencies in Rakefiles
+Style/HashSyntax: # Allow hash rockets for task dependencies in Rakefiles and for Capistrano
   Exclude:
     - '**/*.rake'
+    - 'config/deploy.rb'
+    - 'config/deploy/*.rb'
 
 Style/LambdaCall: # Allow idiomatic Jbuilder usage `json.(@foo, :bar, :baz)`
   Exclude:
