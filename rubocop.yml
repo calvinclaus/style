@@ -71,6 +71,9 @@ Style/IfUnlessModifier: # Sometimes using a modifier makes the code harder to re
 Style/Lambda: # Both `->` and `lambda` are okay for all kinds of procs
   Enabled: false
 
+Style/NumericPredicate: # Using `== 0` is okay (in some cases at least)
+  Enabled: false
+
 Style/ParallelAssignment: # Parallel assignment is ok for simple cases
   Enabled: false
 
