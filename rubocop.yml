@@ -18,8 +18,8 @@ Metrics/MethodLength:
 Metrics/ModuleLength:
   Enabled: false
 
-Metrics/LineLength: # FIXME: Should we disable line legnth checking completely?
-  Max: 120
+Metrics/LineLength:
+  Enabled: false
 
 
 # Disable performance cops that may lead to less readable code in some cases
