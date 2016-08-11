@@ -86,6 +86,9 @@ Style/SingleLineBlockParams: # Block params should be as meaningful as possible
 Style/StringLiterals: # Both '…' and "…" are okay for all kinds of strings
   Enabled: false
 
+Style/WordArray: # Especially in nested arrays consistence if important (even if some of the inner arrays could be replace by word arrays)
+  Enabled: false
+
 
 # Enforce our preferred styling choices
 
