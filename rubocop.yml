@@ -62,6 +62,9 @@ Style/EmptyLines: # Consecutive empty lines are sometimes useful for additional 
 Style/FormatString: # All `sprintf`, `format`, and `%` are okay for formatting strings
   Enabled: false
 
+Style/FrozenStringLiteralComment: # We enable explicitly on a per-project basis, if needed
+  Enabled: false
+
 Style/GuardClause: # Sometimes using a guard clause makes the code harder to follow
   Enabled: false
 
