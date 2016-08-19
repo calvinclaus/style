@@ -107,6 +107,9 @@ Style/DotPosition: # Trailing dot works better with intermittent blank lines and
 Style/EmptyLineBetweenDefs: # Single line method definitions don’t need blank lines in-between them.
   AllowAdjacentOneLineDefs: true
 
+Style/IndentArray:
+  EnforcedStyle: consistent
+
 Style/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
